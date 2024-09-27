@@ -1,0 +1,90 @@
+1. C
+2. C
+3. B
+4. B
+5. D
+
+1. False
+2. True
+3. True
+4. True
+5. False
+
+1. What are the advantages of using Kotlin over Java?
+Comparing to Java, Kotlin has more readable and precise code which makes it easier to understand the program.
+Kotlin is null-safe by default. It does not allow variables to be assigned with a null value. But in Java, we can assign null values to variables and, it may lead to null pointer exception that may crash the application.
+In Kotlin we don’t need all those getter and setter functions. We can access all the data’s using the variable name itself.
+Kotlin has been made to be interoperable. It can be used with existing Java classes and won’t cause any errors. The compiler will allow the code containing the Java and Kotlin classes to work flawlessly.
+In Kotlin variables are defined using val or var to help developers easily understand which values can be reassigned. Using val in our code makes it super clean and will be able to safely assume that the properties will never be changed and that they will not be null.
+
+2. Explain how `val` and `var` differ in Kotlin.
+Kotlin uses two different keywords to declare variables: val and var . Use val for a variable whose value never changes. You can't reassign a value to a variable that was declared using val . Use var for a variable whose value can change.
+
+3. Describe the concept of null safety in Kotlin.
+It does not allow variables to be assigned with a null value.
+
+4. What is the purpose of the `when` statement in Kotlin?
+when{} block is essentially an advanced form of the switch-case statement known from Java.
+In Kotlin, if a matching case is found, only the code in the respective case block is executed, and execution continues with the next statement after the when block.
+This essentially means that we don’t need break statements at the end of each case block.
+
+5. What is dependency injection and why is it important?
+Dependency injection supports the dependency inversion principle by injecting dependencies into the class definitions instead of hardcoding them. In this way, it abstracts the details and ensures that high-level modules don't depend on low-level modules.
+
+6. How does Kotlin handle function declarations compared to Java?
+In Kotlin, functions are defined using the fun keyword, and their syntax is more concise. Kotlin also supports default arguments and higher-order functions.
+
+7. What are higher-order functions and lambdas in Kotlin?
+A higher-order function is a function that takes functions as parameters, or returns a function.
+Lambda expressions and anonymous functions are function literals. Function literals are functions that are not declared but are passed immediately as an expression.
+
+8. What does MVVM stand for, and what are its key components?
+Model-View-ViewModel (MVVM) is a software design pattern that is structured to separate program logic and user interface controls.
+There are three core components in the MVVM pattern: the model, the view, and the view model.
+
+9. How does the `ViewModel` component in MVVM interact with the `View` and `Model`?
+The Model represents the data and business logic layer of the application.
+The View represents the user interface layer responsible for rendering the UI and capturing user actions.
+The ViewModel acts as a bridge between the View and the Model. It retrieves data from the Model, prepares it for presentation in the View, and handles user actions.
+Data flows from the Model to the ViewModel and then to the View for display.
+User actions, such as button clicks or input events, are captured by the View and passed to the ViewModel for processing.
+The ViewModel communicates with the Model to fetch or update data, and it exposes data properties that the View can bind to for automatic UI updates.
+Data binding connects the ViewModel properties to the View, allowing seamless synchronization of data between them.
+
+10. What role does LiveData play in Android’s MVVM architecture?
+LiveData notifies Observer objects when underlying data changes. You can consolidate your code to update the UI in these Observer objects. That way, you don't need to update the UI every time the app data changes because the observer does it for you.
+
+11. Why is Kotlin considered a concise and expressive language?
+Kotlin provides a concise and expressive syntax for working with functions, including support for lambdas, higher-order functions, and function types. This can help you write more concise and expressive code, with fewer lines of code and less boilerplate.
+
+12. What is the main difference between `for` loops in Kotlin compared to other languages?
+Unlike some other languages, Kotlin omits the use of additional syntax like semicolons to separate expressions within the loop definition—making for an uncluttered and readable code structure.
+
+13. How does Kotlin support type inference?
+Kotlin compiler can automatically identify the data type of the variable. The compiler knows this by the initializer. So if you initialize the value on the declaration, you don't need to define the data type explicitly.
+
+14. What is encapsulation in OOP, and how is it implemented in Kotlin?
+Encapsulation restricts direct access to some of an object's components, which helps prevent accidental modification of data. In Kotlin, encapsulation is implemented using access modifiers to control the visibility of class members.
+
+15. Explain the purpose of data binding in the MVVM pattern.
+Data binding is the key technology that MVVM relies on, to link Views with their View-Models. Data binding provides and maintains the automated Two-Way connection between View and ViewModel. A good understanding of data binding is essential for every MVVM developer.
+
+16. What is the significance of using repositories in the MVVM architecture?
+Repository is a class which purpose is to provide a clean API for accessing data. What that means is that the Repository can gather data from different data sources(different REST APIs, cache, local database storage) and it provides this data to the rest of the app.
+The main purpose of this pattern is to separate the way we store or retrieve data with how we use data by the business logic. By separating this, the codebase is more organized, easier to maintain, and enhances its scalability.
+
+17. What benefits does Kotlin offer for Android developers?
+Using Kotlin for Android development, you can benefit from: Less code combined with greater readability. Spend less time writing your code and working to understand the code of others. Fewer common errors.
+
+18. How do you implement dependency injection using Koin in Kotlin?
+To start using Koin, add the necessary dependencies to your project’s build.gradle file.
+Create a module where you define the dependencies needed for your application.
+In your Application class, initialize Koin by loading the modules.
+In your activity or fragment, inject the required dependencies using Koin.
+Here, inject() retrieves the instance of DataRepository from the module defined earlier.
+
+19. Why is constructor injection preferred over field injection in dependency injection?
+Constructor injection makes writing unit tests for your classes easier, as you can pass mock objects as arguments when creating instances of the class under test. With field injection, you must use reflection or other techniques to set up your test environment, making your tests more complex and harder to maintain.
+
+20. How does Kotlin improve the handling of null pointer exceptions compared to Java?
+Kotlin explicitly supports nullability as part of its type system, meaning you can explicitly declare which variables or properties are allowed to be null . Also, when you declare non-null variables, the compiler enforces that these variables cannot hold a null value, preventing an NPE.
