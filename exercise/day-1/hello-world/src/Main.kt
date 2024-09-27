@@ -41,15 +41,30 @@ fun main() {
 //        }
 //    }
 
-    val unitConsumed = arrayOf(100, 150, 250)
-    for (x in unitConsumed) {
-        if (x > 0 && x <= 100) {
-            println(x*1)
-        } else if (x <= 200) {
-            println(((x - 100) * 1.5) + 100)
-        } else {
-            println(((x-200) * 2) + (100 * 1.5) + 100)
+//    val unitConsumed = arrayOf(100, 150, 250)
+//    for (x in unitConsumed) {
+//        if (x > 0 && x <= 100) {
+//            println(x*1)
+//        } else if (x <= 200) {
+//            println(((x - 100) * 1.5) + 100)
+//        } else {
+//            println(((x-200) * 2) + (100 * 1.5) + 100)
+//        }
+//    }
+
+    val guess = arrayOf(5, 3, 7, 0)
+    var i = 0
+
+    while (i < guess.size) {
+        if (guess[i] == 7) {
+            println("Correct number (7) is guessed")
+            break
+        } else if (guess[i] == 0) {
+            println("The guess is 0")
+            break
         }
+        println(guess[i])
+        i++
     }
 
 }
