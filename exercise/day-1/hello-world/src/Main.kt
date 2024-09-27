@@ -28,16 +28,27 @@ fun main() {
 //        }
 //    }
 
-    val totalSpent = arrayOf(300, 150, 50, 40)
-    for (x in totalSpent) {
-        if (x < 50) {
-            println(x)
-        } else if (x <= 100) {
-            println(x * 0.9)
+//    val totalSpent = arrayOf(300, 150, 50, 40)
+//    for (x in totalSpent) {
+//        if (x < 50) {
+//            println(x)
+//        } else if (x <= 100) {
+//            println(x * 0.9)
+//        } else if (x <= 200) {
+//            println(x * 0.8)
+//        } else {
+//            println(x * 0.7)
+//        }
+//    }
+
+    val unitConsumed = arrayOf(100, 150, 250)
+    for (x in unitConsumed) {
+        if (x > 0 && x <= 100) {
+            println(x*1)
         } else if (x <= 200) {
-            println(x * 0.8)
+            println(((x - 100) * 1.5) + 100)
         } else {
-            println(x * 0.7)
+            println(((x-200) * 2) + (100 * 1.5) + 100)
         }
     }
 
