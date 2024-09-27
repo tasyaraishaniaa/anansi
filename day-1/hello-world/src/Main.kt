@@ -1,7 +1,9 @@
 fun main() {
-    val score = arrayOf(59, 69, 79, 89, 99)
+    val score = arrayOf(59, 69, 79, 89, 99, -1, 101)
     for (x in score) {
-        if (x < 60) {
+        if (x < 0 || x > 100) {
+            println("Invalid score.")
+        } else if (x < 60) {
             println("F")
         } else if (x < 70) {
             println("D")
