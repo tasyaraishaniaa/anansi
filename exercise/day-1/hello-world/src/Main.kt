@@ -52,19 +52,31 @@ fun main() {
 //        }
 //    }
 
-    val guess = arrayOf(5, 3, 7, 0)
-    var i = 0
+//    val guess = arrayOf(5, 3, 7, 0)
+//    var i = 0
+//
+//    while (i < guess.size) {
+//        if (guess[i] == 7) {
+//            println("Correct number (7) is guessed")
+//            break
+//        } else if (guess[i] == 0) {
+//            println("The guess is 0")
+//            break
+//        }
+//        println(guess[i])
+//        i++
+//    }
 
-    while (i < guess.size) {
-        if (guess[i] == 7) {
-            println("Correct number (7) is guessed")
-            break
-        } else if (guess[i] == 0) {
-            println("The guess is 0")
+    var fuel = 0
+
+    while (fuel < 50) {
+        println("Fuel = " + fuel + " liters")
+        println("Filling...")
+        fuel += 5
+        if (fuel > 40) {
+            println("The fuel exceeds 40 liters, the station stops. Fuel = " + fuel + " liters.")
             break
         }
-        println(guess[i])
-        i++
     }
 
 }
