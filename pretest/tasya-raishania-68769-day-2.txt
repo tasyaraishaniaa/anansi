@@ -1,0 +1,105 @@
+1. A
+2. D
+3. C
+4. B
+5. C
+
+6. Use val for a variable whose value never changes. You can't reassign a value to a variable that was declared using val . Use var for a variable whose value can change.
+7.
+The listOf() function is a convenient way to create an immutable list.
+When we need to create a list that can be modified later, we can use the mutableListOf() function. It works similarly to listOf() but returns a mutable list instead.
+8.
+    val score = arrayOf(59, 69, 79, 89, 99, -1, 101)
+    for (x in score) {
+        if (x < 0 || x > 100) {
+            println("Invalid score.")
+        } else if (x < 60) {
+            println("F")
+        } else if (x < 70) {
+            println("D")
+        } else if (x < 80) {
+            println("C")
+        } else if (x < 90) {
+            println("B")
+        } else {
+            println("A")
+        }
+    }
+9. In Kotlin, the variables can be made of Null types by just adding a “?” symbol to the right side of the data type.
+10.
+A lambda expression in Kotlin is a concise, unnamed function enclosed in braces, used for defining code blocks that can be passed as values or stored as variables.
+11.
+Classes in Kotlin are defined using the keyword class followed by the class name. The body goes inside the curly braces.
+12.
+    for (x in variable)
+        print(x)
+13. Kotlin's when expression allows us to combine different cases into one by concatenating the matching conditions with a comma. Only one case has to match to execute the respective block of code, so the comma acts as an OR operator.
+14. number % 2 == 0
+15. Use arrayOf() ex: val score = arrayOf(59, 69, 79, 89, 99, -1, 101)
+
+16. False
+17. True
+18. True
+19. True
+20. True
+
+21.
+var x = "Hello"
+x = "World"
+22.
+fun sum(a: Int, b: Int): Int {
+        return a + b
+    }
+val result = sum(5, 10)
+23.
+val myList = mutableListOf(1, 2, 3)
+    myList.add(4)
+24.
+val name: String? = null
+25.
+if (x > 5) {
+    println("x is greater than 5")
+}
+26.
+when (x) {
+        1 -> println("One")
+        2 -> println("Two")
+        else -> println("Other")
+    }
+27.
+fun greet(name: String) {
+        println("Hello, $name")
+    }
+28.
+val myVar = 10
+val result = myVar + 5
+29.
+val numbers = arrayOf(1, 2, 3)
+println(numbers[2])
+30.
+    class Person(val name: String, val age: Int) {
+        fun greet() {
+            print("Hello, my name is $name and I'm $age")
+        }
+    }
+
+var availableSeats = arrayOf(1, 2, 3, 4, 5)
+fun reserveSeat(name: String, seatNumber: Int) {
+    for (x in availableSeats) {
+        var i = 1
+        if (x == seatNumber) {
+            availableSeats[i] = 0  // Mark the seat as reserved by setting it to 0
+            println("$name reserved seat $seatNumber.")
+            return
+        }
+        i++
+    }
+    println("Seat $seatNumber is already reserved.")
+}
+
+fun main() {
+    reserveSeat("John", 2)
+    reserveSeat("Sarah", 2)
+}
+
+
