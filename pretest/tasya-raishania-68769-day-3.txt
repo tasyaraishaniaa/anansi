@@ -1,0 +1,55 @@
+1. B
+2. B
+3. C
+4. C
+5. C
+
+6. In Kotlin, listOf() creates an immutable list, meaning its contents cannot be modified after creation. On the other hand, mutableListOf() creates a mutable list that allows elements to be added, removed, or updated. Use listOf() when you need a fixed set of items, and mutableListOf() when you need a dynamic list that can change during the program's execution.
+7. 
+onDestroy() 
+The final call received before the activity is destroyed. This can happen either because the activity is finishing (when finish() is invoked) or because the system is temporarily destroying this instance of the activity to save space. To distinguish between these scenarios, check it with isFinishing() method.
+onStop()
+It is invoked when the activity is not visible to the user. It is followed by onRestart() when the activity is revoked from the background, followed by onDestroy() when the activity is closed or finished, and nothing when the activity remains on the background only. Note that this method may never be called, in low memory situations where the system does not have enough memory to keep the activity’s process running after its onPause() method is called.  
+8.
+Threads tend to be more expensive and slower than coroutines because they involve kernel-level operations and require more resources. Coroutines are lightweight and efficient and can be used to perform many concurrent operations with minimal overhead.
+9.
+To handle these configuration changes, Android provides callbacks to save your application state before destroying either Activity or Fragment. In the same it also provides to restore the application state when it is recreating them.
+There are a different options to handle the orientation changes:
+1. Lock screen orientation
+2. Prevent Activity to recreated
+3. Save basic state
+4. Save complex objects
+10.
+View: Used to create and manage individual UI components.
+ViewGroup: Used to organize and manage a collection of child Views.
+11. RecyclerView provides better performance and flexibility for more complex layouts, while ListView is easier to use for basic list layouts.
+12. The onResume() method runs after the onStart() method. It gets called when the activity is about to move into the foreground. After the onResume() method has run, the activity has the focus and the user can interact with it.
+13. launch is used for fire-and-forget style coroutines. It starts a new coroutine that runs concurrently with other coroutines but does not return a result. It is suitable for cases where you need to perform background operations without waiting for a specific outcome.
+14. LiveData notifies Observer objects when underlying data changes. You can consolidate your code to update the UI in these Observer objects. That way, you don't need to update the UI every time the app data changes because the observer does it for you. No memory leaks.
+15. The purpose of the ViewModel is to acquire and keep the information that is necessary for an Activity or a Fragment.
+
+16. No
+17. Yes
+18. No
+19. Yes
+20. Yes
+
+21.
+    val myList = mutableListOf(1, 2, 3)
+    myList.add(4)
+22.
+suspend fun myCoroutine() {
+    delay(1000L)
+    println("Coroutine executed")
+}
+23. gatau
+24.
+val map = mutableMapOf(1 to "One", 2 to "Two")
+map[3] = "Three"
+25. gatau
+
+Story-based Question : gatau
+
+
+
+
