@@ -1,0 +1,37 @@
+1. A
+2. B
+3. B
+4. B
+5. B
+
+1. True
+2. True
+3. False
+4. True
+5. True
+
+1. RecyclerView reuses the view for new items that have scrolled onscreen. RecyclerView improves performance and your app's responsiveness, and it reduces power consumption.
+2. You can define the button in your XML layout file using <Button>. This is usually done in the res/layout directory.
+3. ConstraintLayout, we can position our UI components in any sort of order whether it may be horizontal or vertical. But in the case of Linear Layout, we can only arrange our UI components either in a horizontal or in a vertical manner.
+4. You can define the button in your XML layout file using <ProgressBar>. This is usually done in the res/layout directory.
+5. Checkboxes let the user select one or more options from a set.
+
+1.
+<ImageView
+    android:id="@+id/imageView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/sample_image" />
+2.
+<Button
+    android:id="@+id/button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Press Me" />
+3.
+<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
