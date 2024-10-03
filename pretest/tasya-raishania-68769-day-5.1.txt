@@ -1,0 +1,43 @@
+1. D
+2. B
+3. A
+4. C
+5. B
+
+1. False
+2. True
+3. False
+4. True
+5. False
+
+1.
+- onPause() is called when the activity is partially obscured but still visible. It's a transient state where the activity remains interactive but might be temporarily interrupted by another UI element or system event. 
+- onStop() is called when the activity is no longer visible to the user.
+2.
+Create a New Explicit or Implicit Intent object in source activity.
+Call intent.putExtra(String key, Object data) method to save data in it.
+Call startActivity(intent) method in source activity to pass the intent to android os.
+Call getIntent() method in target activity.
+Use intent.getStringExtra(String key) to get the transferred data.
+3.
+onSaveInstanceState() is a crucial method in Android development used to save an activity's state before it is destroyed, such as during a screen rotation. When the device orientation changes, Android destroys and recreates the activity, potentially losing any user data or UI state. onSaveInstanceState() allows you to preserve essential data during this process, ensuring that when the activity is recreated, you can restore it in onCreate() or onRestoreInstanceState().
+4.
+Once you press the back key the activity's onDestroy() method will be called and the activity will be flushed out of the memory.
+5.
+In Android, you can start a new activity and expect a result from it using the startActivityForResult() method (deprecated) or the newer Activity Result API, which is more efficient and simplifies the process of handling results between activities.
+
+1.
+val intent = Intent(this, MainActivity::class.java)
+startActivity(intent)
+startActivity() requires an Intent.
+Intent is used to specify the action to be performed and the component (activity) to be started.
+2.
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
+}
+3.
+override fun onDestroy() {
+    super.onDestroy()
+}
+
