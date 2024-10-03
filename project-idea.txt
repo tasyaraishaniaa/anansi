@@ -1,0 +1,44 @@
+1. Aplikasi Daftar Film
+Latar Belakang:
+Aplikasi ini memungkinkan pengguna untuk mencari dan menyimpan daftar film yang ingin ditonton serta dapat memberi rating pada film yang telah ditonton.
+Fragment:
+•	Fragment Daftar Film: Menampilkan daftar film terbaru.
+•	Fragment Search By Kategori: Menampilkan kategori yang dapat diklik.
+•	Activity Detail Film: Menampilkan informasi lengkap film, termasuk sinopsis, rating, dan trailer serta dapat memberi rating.
+•	Fragment Daftar Tontonan: Menampilkan film yang disimpan di daftar tontonan.
+________________________________________
+2. Aplikasi Berita Harian (Opsi 2)
+Latar Belakang:
+Aplikasi ini memberikan pengguna berita terkini dari berbagai sumber.
+Fragment:
+•	Activity Login: Input username dan password (username ditampilkan di pojok kiri atas untuk greeting)
+•	Fragment Berita Utama: Menampilkan daftar berita terbaru.
+•	Activity Detail Berita: Menampilkan detail berita yang diklik.
+•	Fragment Favorit: Menampilkan berita yang disimpan sebagai favorit.
+________________________________________
+3. Aplikasi Perencanaan Kegiatan (Opsi 3)
+Latar Belakang:
+Aplikasi ini membantu pengguna merencanakan kegiatan sehari-hari dan menyimpan catatan penting.
+Fragment:
+•	Activity Menambah Kegiatan: Menambahkan judul kegiatan (required), link (optional), deskripsi (optional).
+•	Fragment Daftar Kegiatan: Menampilkan daftar kegiatan yang direncanakan dan mengubah status kegiatan.
+•	Fragment Detail Kegiatan: Menampilkan detail kegiatan dan opsi untuk menghapus.
+________________________________________
+4. Aplikasi Cuaca Harian (Opsi 4)
+Latar Belakang:
+Aplikasi ini memberikan informasi cuaca terkini dan ramalan cuaca untuk beberapa hari ke depan.
+Fragment:
+•	Fragment Cuaca Terkini: Menampilkan informasi cuaca terkini berdasarkan lokasi pengguna.
+•	Fragment Ramalan: Menampilkan ramalan cuaca per jam di hari ini.
+•	Activity Detail Cuaca Terkini: Menampilkan video berita cuaca hari ini.
+________________________________________
+5. Aplikasi Pengelola Keuangan Pribadi (Opsi 5)
+Latar Belakang:
+Mencatat pengeluaran sehari-hari sering kali terlewat, sehingga sulit untuk melacak pengeluaran bulanan. Aplikasi ini memudahkan pengguna untuk mengelola pengeluaran mereka.
+Detail Fragment:
+1.	Fragment Home:
+o	Menampilkan current balance dan pie chart pengeluaran.
+2.	Fragment History:
+o	Menampilkan riwayat pengeluaran
+3.	Activity Menambah Pengeluaran:
+o	Form untuk menambah pengeluaran: jumlah, kategori, dan deskripsi/catatan
