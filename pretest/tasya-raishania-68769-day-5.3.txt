@@ -4,14 +4,32 @@
 4. B
 5. D
 
-1.
-2.
-3.
-4.
-5.
+1. False
+2. False
+3. True
+4. False
+5. True
 
 1.
+apply() changes the in-memory SharedPreferences object immediately but writes the updates to disk asynchronously. Alternatively, you can use commit() to write the data to disk synchronously. But because commit() is synchronous, you should avoid calling it from your main thread because it could pause your UI rendering.
 2.
+You can store a boolean value representing the user's login status (e.g., true for logged in, false for logged out) using the putBoolean() method.
 3.
+Depending on the data type (e.g., boolean, string, int), use the corresponding get method to retrieve the value. Ex: getString(), getBoolean(), getInt()
 4.
+It offers the following: Ease of use and requires minimal setup.
 5.
+Yes, you can modify Shared Preferences from multiple threads using two available methods, apply() and commit().
+
+1.
+    val sharedPref = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+    val editor = sharedPref.edit()
+    editor.putString("username", "JohnDoe")
+    editor.apply()
+2.
+    val sharedPref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+    val username = sharedPref.getString("username", "defaultName")
+3.
+    val editor = sharedPref.edit()
+    editor.remove("key")
+    editor.commit()

@@ -1,0 +1,50 @@
+1. B
+2. B
+3. B
+4. C
+5. A
+
+1. True
+2. False
+3. True
+4. False
+5. False
+
+1. Converts JSON data to Java/Kotlin objects.
+2. Initiate the call asynchronously using methods like enqueue() in Retrofit.
+3.
+execute() – Synchronously send the request and return its response.
+enqueue() – Asynchronously send the request and notify callback of its response or if an error occurred talking to the server, creating the request, or processing the response.
+4. Use `@Query` to append query parameters to the URL.
+5.
+onResponse() returns a HTTP response (200, 400, 500 etc)
+onFailure() represents a network error (like no internet) or an unexpected error
+
+1.
+@GET("users")
+fun getUsers(): Call<List<User>>
+2.
+@POST("login")
+@FormUrlEncoded
+fun loginUser(
+    @Field("username") username: String,
+    @Field("password") password: String
+): Call<LoginResponse>
+3.
+@GET("user/{id}")
+fun getUserById(@Path("id") userId: Int): Call<User>
+
+val call = apiService.getUserById(123)
+call.enqueue(object : Callback<List<User>> {
+       override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
+           if (response.isSuccessful) {
+               val users = response.body()
+               // Handle the data
+           }
+       }
+
+       override fun onFailure(call: Call<List<User>>, t: Throwable) {
+           // Handle the error
+       }
+})
+

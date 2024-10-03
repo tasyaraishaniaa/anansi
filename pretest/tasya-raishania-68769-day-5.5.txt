@@ -1,0 +1,59 @@
+1. C
+2. C
+3. A
+4. B
+5. b
+
+1. False
+2. False
+3. True
+4. True
+5. False
+
+1. Android provides the `MediaPlayer` class to play audio files stored locally or from a remote source (URL).
+
+2.
+1. **Add a `VideoView` in the Layout:**
+   - Declare a `VideoView` in the activity’s XML layout file.
+   
+2. **Load and Play Video:**
+   - Use `setVideoURI()` for online video or `setVideoPath()` for local files.
+   - Call `start()` to begin playback.
+
+3.
+1. Add Required Permissions
+To use the camera, you need to declare the required permissions in your app's AndroidManifest.xml file.
+2. Request Runtime Permissions
+Starting from Android 6.0 (API level 23), you need to request runtime permissions.
+3. Open the Camera
+To open the camera, you can create an Intent to launch the camera application. You can specify the location where the image should be saved by providing a file URI.
+4. Handle the Camera Result
+Override the onActivityResult() method to handle the result from the camera.
+5. Update AndroidManifest.xml for FileProvider
+You need to define a FileProvider in your AndroidManifest.xml to securely share the image file URI.
+
+4.
+Required Permissions
+RECORD_AUDIO:
+This permission is necessary to allow your app to access the device's microphone and record audio.
+WRITE_EXTERNAL_STORAGE (Optional, depending on your implementation):
+If you intend to save the recorded audio files to external storage (such as the device's storage or an SD card), you will also need this permission. Starting from Android 10 (API level 29), it’s recommended to use scoped storage for saving files.
+
+5.
+To play an audio file stored in the device’s raw resource directory in an Android application, you can use the MediaPlayer class. 
+1. Add the Audio File to the Raw Resource Directory
+Place your audio file (e.g., audio_file.mp3) in the res/raw directory of your Android project. If the raw directory doesn’t exist, you can create it by right-clicking on the res folder and selecting New > Android Resource Directory, then choosing raw as the resource type.
+2. Using MediaPlayer to Play the Audio File
+
+1.
+val mediaPlayer = MediaPlayer.create(this, R.raw.audio)
+mediaPlayer.start()
+2.
+val videoView: VideoView = findViewById(R.id.videoView)
+videoView.setVideoPath("video.mp4")
+videoView.start()
+3.
+val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+if (intent.resolveActivity(packageManager) != null) {
+    startActivityForResult(intent, 1)
+}
